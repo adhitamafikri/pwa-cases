@@ -1,0 +1,2 @@
+[tools]
+node = { version = "22.16.0", packageManager = "npm" }
