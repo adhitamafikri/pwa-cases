@@ -1,4 +1,10 @@
-# PWA
+# DEVELOPMENT GUIDE
+
+## Prerequisites
+
+- Node 22.16.0
+- Install `mkcert`. Read the documentation [https://github.com/FiloSottile/mkcert](https://github.com/FiloSottile/mkcert)
+- Generate local cert with `mkcert`. Prefer to generate in the `certs` directory in the project
 
 ## Tools
 
