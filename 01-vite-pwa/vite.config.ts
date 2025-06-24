@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
           globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
         },
         manifest: {
-          id: 'https://vite-pwa.localhost:5173',
+          id: "https://vite-pwa.localhost:5173",
           name: "Vite PWA App",
           short_name: "VitePWA",
           description: "An example of PWA built with Vite",
@@ -43,8 +43,8 @@ export default defineConfig(({ mode }) => {
       host: env.VITE_APP_HOST || "localhost",
       port: env.VITE_APP_PORT ? Number(env.VITE_APP_PORT) : 3000,
       https: {
-        key: "./certificates/vite-pwa.localhost-key.pem",
-        cert: "./certificates/vite-pwa.localhost.pem",
+        key: env.APP_CERT_KEY_PATH,
+        cert: env.APP_CERT_PATH,
       },
     },
   };
