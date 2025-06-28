@@ -10,13 +10,19 @@ export default defineConfig(({ mode }) => {
       react(),
       VitePWA({
         strategies: "generateSW",
-        registerType: "autoUpdate",
-        injectRegister: "auto",
+        registerType: "prompt",
+        injectRegister: false,
         devOptions: {
           enabled: process.env.NODE_ENV === "development",
+          navigateFallback: "index.html",
+          suppressWarnings: false,
+          type: "classic",
         },
         workbox: {
           globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+          sourcemap: true,
+          cleanupOutdatedCaches: true,
+          clientsClaim: true,
         },
         manifest: {
           id: "https://vite-pwa.localhost:5173",
